@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+				<meta charset="UTF-8">
+				<title>Заголовок страницы</title>
+</head>
+<body>
+				<button class="lolkek" onclick="func;">Открыть</button>
+				<button><div id="demo-id">Demo ID</div></button>
+				<script>
+								const demoId = document.querySelector('#demo-id');
+								var a=document.createElement("a")
+var file=new Blob(["Hello World!"],{type:"octet/stream"});
+a.href=URL.createObjectURL(file);
+a.innerHTML="DOWNLOAD";
+a.download="click.mp3";
+var func=function(){
+    document.body.appendChild(a);
+};
+if(document.body)func();
+else window.onload=func;
+
+				</script>
+				<audio id="music" loop>
+            <source src="https://dl.dropbox.com/s/wyqfadg455kmobq/fully-faltu-mika-singh.mp3?dl=1">
+        </audio> 
+        <script>
+            Swal.fire({
+                alert:"Play Music..?",
+                confirmButtonText:"Yes",
+                showDenyButton:true
+            }).then(function(permission){
+                if(permission.isConfirmed){
+                    document.getElementById("music").play()
+                }
+            })
+        </script>
+        <br>
+        <p><a href="https://wdfiles.ru/72de08~i?760038eb15981509aa16770d31406c35" target="_blank" title="Download From загрузить файл">Скачать файл VID-20220716-WA0001.mp4 from загрузить файл</a></p>
+</body>
+</html>
